@@ -11,10 +11,10 @@
 
   {% comment %} Dublin Core metadata for Zotero {% endcomment %}
   <meta name="DC.title" content="{{ page.title }}" />
-  <meta name="DC.creator" content="{{ page.author }}" />
-  <meta name="DC.contributor" content="{{ page.editor }}" />
+  {% if page.author %}<meta name="DC.creator" content="{{ page.author }}" />{% endif %}
+  {% if page.editor %}<meta name="DC.contributor" content="{{ page.editor }}" />{% endif %}
   <meta name="DC.date" content="{{ page.date }}" />
-  <meta name="DC.rights" content="{{ page.rights }}" />
+  {% if page.rights %}<meta name="DC.rights" content="{{ page.rights }}" />{% endif %}
   <meta name="DC.source" content="{{ site.title }}" />
 
     {% comment %} Open Graph metadata {% endcomment %}
