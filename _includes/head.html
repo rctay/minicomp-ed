@@ -1,15 +1,15 @@
 <head>
-  <!-- Canonical link to help search engines -->
+  {% comment %} Canonical link to help search engines {% endcomment %}
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
 
-  <!-- Basic meta elements -->
+  {% comment %} Basic meta elements {% endcomment %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-  <!-- Enable responsiveness on mobile devices -->
+  {% comment %} Enable responsiveness on mobile devices {% endcomment %}
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
-  <!-- Dublin Core metadata for Zotero -->
+  {% comment %} Dublin Core metadata for Zotero {% endcomment %}
   <meta name="DC.title" content="{{ page.title }}" />
   <meta name="DC.creator" content="{{ page.author }}" />
   <meta name="DC.contributor" content="{{ page.editor }}" />
@@ -17,7 +17,7 @@
   <meta name="DC.rights" content="{{ page.rights }}" />
   <meta name="DC.source" content="{{ site.title }}" />
 
-    <!-- Open Graph metadata -->
+    {% comment %} Open Graph metadata {% endcomment %}
     {% if page.layout == "default" %}
     <meta property="og:title" content="{{page.title}}" />
     <meta property="og:description" content="{{site.description}}">
@@ -33,9 +33,9 @@
 
   <title>{{ site.title }} - {{ page.title }}</title>
 
-  <!-- CSS link -->
+  {% comment %} CSS link {% endcomment %}
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}" />
 
-  <!-- RSS -->
+  {% comment %} RSS {% endcomment %}
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ "atom.xml" | absolute_url }}" />
 </head>
